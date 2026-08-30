@@ -1,0 +1,63 @@
+# ---- Secrets: never commit ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
+
+# ---- Deployment / platform state ----
+.vercel/
+.vercel
+.netlify/
+
+# ---- Real client data: never commit ----
+# This service handles PII (names, dates of birth, addresses).
+# Only synthetic fixtures belong in version control.
+data/
+private/
+exports/
+hmis/
+client-data/
+*.csv
+*.xlsx
+*.xls
+*.sqlite
+*.db
+*.sql
+*.dump
+# Real signed consent packets / downloaded PandaDoc documents
+Panda Doc Document/
+downloads/
+*-real.pdf
+*-client.pdf
+# Allow only the synthetic test fixture
+!tests/fixtures/*.pdf
+
+# ---- Dependencies & build output ----
+node_modules/
+dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# ---- Logs & caches ----
+*.log
+npm-debug.log*
+yarn-error.log*
+.npm/
+.eslintcache
+coverage/
+
+# ---- OS / editor cruft (can leak local paths) ----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

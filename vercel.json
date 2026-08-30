@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/referral.ts": {
+      "maxDuration": 60
+    }
+  }
+}
